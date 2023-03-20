@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+		<meta name="wechat-enable-text-zoom-em" content="true">
+		<meta charset="utf-8">
+		<title>物理试题</title>
+		<link rel="stylesheet" href="weui.css">
+		<link rel="stylesheet" href="example.css">
+	</head>
+	<script type="text/javascript">
+	    $(function(){
+	        var $tooltips = $('.js_tooltips');
+	      var $toast = $('#js_toast');
+	
+	        $('#showTooltips').on('click', function(){
+	            if ($tooltips.css('display') != 'none') return;
+	
+	            // toptips的fixed, 如果有`animation`, `position: fixed`不生效
+	            $('.page.cell').removeClass('slideIn');
+	
+	            $toast.fadeIn(100);
+	            $toast.attr('aria-live','assertive');
+	            setTimeout(function () {
+	              $toast.fadeOut(100);
+	              $toast.attr('aria-live','off');
+	            }, 2000);
+	        });
+	    });
+		
+		function showAlert() {
+		  alert('“水中捞月”，“镜中生花”，“形影相随”和“海市蜃楼”都是成语，而光的折射现象应该是“海市蜃楼”。在海市蜃楼现象中，由于大气层中不同密度的空气对光线的折射作用，使得远处的物体的图像被扭曲并呈现出虚幻的效果，就好像是在远处出现了一座城市或者湖泊。"');
+		}
+
+		
+	</script>
+	<body>
+		<form>
+			<div class="page">
+			  <div class="weui-form">
+			    <div class="weui-form__text-area">
+			      <h2 class="weui-form__title">物理试题每日一练</h2>
+				  <p>以下描述中与光的折射有关的是（）</p>
+			    </div>
+			    <div class="weui-form__control-area">
+			      <div class="weui-cells__group weui-cells__group_form">
+			        <div class="weui-cells weui-cells_radio">
+			            <label class="weui-cell weui-cell_active weui-check__label" for="x11">
+			                <div class="weui-cell__bd">
+			                    <p>形影相随，亲密无间</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                    <input type="radio" class="weui-check" name="radio1" id="x11"/>
+			                    <span class="weui-icon-checked"></span>
+			                </div>
+			            </label>
+			            <label class="weui-cell weui-cell_active weui-check__label" for="x12">
+			
+			                <div class="weui-cell__bd">
+			                    <p>海市蜃楼，虚无缥缈</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                    <input type="radio" name="radio1" class="weui-check" id="x12" checked="checked"/>
+			                    <span class="weui-icon-checked"></span>
+			                </div>
+			            </label>
+						<label class="weui-cell weui-cell_active weui-check__label" for="x13">
+								
+						    <div class="weui-cell__bd">
+						        <p>镜中生花，脱离实际</p>
+						    </div>
+						    <div class="weui-cell__ft">
+						        <input type="radio" name="radio1" class="weui-check" id="x13" checked="checked"/>
+						        <span class="weui-icon-checked"></span>
+						    </div>
+						</label>
+						<label class="weui-cell weui-cell_active weui-check__label" for="x14">
+								
+						    <div class="weui-cell__bd">
+						        <p>水中捞月，一无所有</p>
+						    </div>
+						    <div class="weui-cell__ft">
+						        <input type="radio" name="radio1" class="weui-check" id="x14" checked="checked"/>
+						        <span class="weui-icon-checked"></span>
+						    </div>
+						</label>
+			        </div>
+			      </div>
+			    </div>
+			    <div class="weui-form__opr-area">
+			      <button onclick="alert('正确答案是：海市蜃楼，虚无缥缈')" type="button" class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">提交答案</button>
+				  <button onclick="showAlert()" type="button" class="weui-btn weui-btn_default">详解</button>
+
+			    </div>
+			  </div>
+			  <nav class="nav">
+				  <li><a href="wuli.html">1</a></li>
+				  <li><a href="index.html">2</a></li>
+				  <li><a href="task03.html">3</a></li>
+				  <li><a href="task04.html">4</a></li>
+			  </nav>
+			</div>
+		</form>
+	</body>
+</html>
+<style>
+nav{
+ list-style: none;//去掉数字前的小圆点
+}
+.nav{
+	display: flex;//使用弹性盒子布局flexbox
+	justify-content: center;//水平居中排列
+}
+.nav>li{
+	padding: 0 20px;//内边距
+	background: #cccccc;//背景色
+	border: 2px solid #cccccc;//边框
+}
+</style>
+

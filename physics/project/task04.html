@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+		<meta name="wechat-enable-text-zoom-em" content="true">
+		<meta charset="utf-8">
+		<title>物理试题</title>
+		<link rel="stylesheet" href="weui.css">
+		<link rel="stylesheet" href="example.css">
+	</head>
+	<script type="text/javascript">
+	    $(function(){
+	        var $tooltips = $('.js_tooltips');
+	      var $toast = $('#js_toast');
+	
+	        $('#showTooltips').on('click', function(){
+	            if ($tooltips.css('display') != 'none') return;
+	
+	            // toptips的fixed, 如果有`animation`, `position: fixed`不生效
+	            $('.page.cell').removeClass('slideIn');
+	
+	            $toast.fadeIn(100);
+	            $toast.attr('aria-live','assertive');
+	            setTimeout(function () {
+	              $toast.fadeOut(100);
+	              $toast.attr('aria-live','off');
+	            }, 2000);
+	        });
+	    });
+		
+		function showAlert() {
+		  alert('牛顿第一定律（也称为惯性定律）是指物体在不受外力作用时将保持匀速直线运动或静止的状态。这个定律无法直接用实验证明，因为实验中总会存在一些摩擦阻力、空气阻力等外力作用于物体上，导致物体不能完全保持匀速直线运动或静止状态。此外，即使我们尝试消除所有外力影响，剩下的微小摆动也足以影响实验结果。因此，虽然牛顿第一定律是基本的物理定律之一，但我们无法直接通过实验证明它的准确性。');
+		}
+		
+
+	</script>
+	<style>
+	nav{
+	 list-style: none;//去掉数字前的小圆点
+	}
+	.nav{
+		display: flex;//使用弹性盒子布局flexbox
+		justify-content: center;//水平居中排列
+	}
+	.nav>li{
+		padding: 0 20px;//内边距
+		background: #cccccc;//背景色
+		border: 2px solid #cccccc;//边框
+	}
+	</style>
+	
+	<body>
+		<form>
+			<div class="page">
+			  <div class="weui-form">
+			    <div class="weui-form__text-area">
+			      <h2 class="weui-form__title">物理试题每日一练</h2>
+				  <p>以下物理规律无法用实验直接验证的是（）</p>
+			    </div>
+			    <div class="weui-form__control-area">
+			      <div class="weui-cells__group weui-cells__group_form">
+			        <div class="weui-cells weui-cells_radio">
+			            <label class="weui-cell weui-cell_active weui-check__label" for="x11">
+			                <div class="weui-cell__bd">
+			                    <p>牛顿第一定律</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                    <input type="radio" class="weui-check" name="radio1" id="x11"/>
+			                    <span class="weui-icon-checked"></span>
+			                </div>
+			            </label>
+			            <label class="weui-cell weui-cell_active weui-check__label" for="x12">
+			
+			                <div class="weui-cell__bd">
+			                    <p>欧姆定律</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                    <input type="radio" name="radio1" class="weui-check" id="x12" checked="checked"/>
+			                    <span class="weui-icon-checked"></span>
+			                </div>
+			            </label>
+						<label class="weui-cell weui-cell_active weui-check__label" for="x13">
+								
+						    <div class="weui-cell__bd">
+						        <p>光的反射定律</p>
+						    </div>
+						    <div class="weui-cell__ft">
+						        <input type="radio" name="radio1" class="weui-check" id="x13" checked="checked"/>
+						        <span class="weui-icon-checked"></span>
+						    </div>
+						</label>
+						<label class="weui-cell weui-cell_active weui-check__label" for="x14">
+								
+						    <div class="weui-cell__bd">
+						        <p>焦耳定律</p>
+						    </div>
+						    <div class="weui-cell__ft">
+						        <input type="radio" name="radio1" class="weui-check" id="x14" checked="checked"/>
+						        <span class="weui-icon-checked"></span>
+						    </div>
+						</label>
+			        </div>
+			      </div>
+			    </div>
+			    <div class="weui-form__opr-area">
+			      <button onclick="alert('正确答案是：牛顿第一定律')" type="button" class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">提交答案</button>
+				  <button onclick="showAlert()" type="button" class="weui-btn weui-btn_default">详解</button>
+			    </div>
+			  </div>
+			  <nav class="nav">
+				  <li><a href="wuli.html">1</a></li>
+				  <li><a href="index.html">2</a></li>
+				  <li><a href="task03.html">3</a></li>
+				  <li><a href="task04.html">4</a></li>
+			  </nav>
+			 
+			</div>
+		</form>
+	</body>
+	
+</html>
+
+<div><img src="img/4-1..jpg",aalt="图4-1"></div>

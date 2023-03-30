@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Canvas Drawing</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+	  
+	  nav{
+	   list-style: none;//去掉数字前的小圆点
+	  }
+	  .nav {
+	    display: flex;
+	    justify-content: center;
+	    background-color: #f2f2f2; /* 设置背景色 */
+	    padding: 15px; /* 设置内边距 */
+	  }
+	  
+	  .nav > li {
+	    margin: 0 10px; /* 设置列表项之间的水平间距 */
+	    padding: 10px 20px; /* 设置列表项的内边距 */
+	    background-color: #ffffff; /* 设置列表项的背景色 */
+	    border: 1px solid #d9d9d9; /* 设置列表项的边框 */
+	    border-radius: 5px; /* 添加圆角效果 */
+	    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+	  }
+	  
+	  .nav > li:hover {
+	    background-color: #f2f2f2; /* 鼠标悬停时，改变列表项的背景色 */
+	  }
+
+	  
+    </style>
+
+  </head>
+  <body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <button onclick="clearCanvas()">初始化</button>
+	<script>
+	  var canvas = document.getElementById("myCanvas");
+	  var ctx = canvas.getContext("2d");
+	
+	  var isDrawing = false;
+	
+	  canvas.addEventListener("mousedown", function(e) {
+	    isDrawing = true;
+	    ctx.beginPath();
+	    ctx.moveTo(e.pageX - canvas.offsetLeft, e.pageY - canvas.offsetTop);
+	  });
+	
+	  canvas.addEventListener("mousemove", function(e) {
+	    if (isDrawing) {
+	      ctx.lineTo(e.pageX - canvas.offsetLeft, e.pageY - canvas.offsetTop);
+	      ctx.stroke();
+	    }
+	  });
+	
+	  canvas.addEventListener("mouseup", function(e) {
+	    isDrawing = false;
+	  });
+	
+	  function clearCanvas() {
+	    ctx.clearRect(0, 0, canvas.width, canvas.height);
+	  }
+	</script>
+	
+	
+  <nav class="nav">
+  				  <li><a href="wuli.html">1</a></li>
+  				  <li><a href="index.html">2</a></li>
+  				  <li><a href="task03.html">3</a></li>
+  				  <li><a href="task04.html">4</a></li>
+  				  <li><a href="task05.html">5</a></li>
+  				  <li><a href="task06.html">6</a></li>
+  				  <li><a href="task07.html">7</a></li>
+  </nav>
+	
+	
+	
+  </body>
+</html>

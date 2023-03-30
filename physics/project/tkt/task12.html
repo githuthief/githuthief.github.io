@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+		<meta name="wechat-enable-text-zoom-em" content="true">
+		<link rel="stylesheet" href="weui.css">
+		<link rel="stylesheet" href="example.css">
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myDiv {
+		  display: none;
+		}
+		
+		#myImage {
+			display: none;
+		}
+		
+		nav{
+		 list-style: none;//去掉数字前的小圆点
+		}
+		.nav {
+		  display: flex;
+		  justify-content: center;
+		  background-color: #f2f2f2; /* 设置背景色 */
+		  padding: 15px; /* 设置内边距 */
+		}
+		
+		.nav > li {
+		  margin: 0 10px; /* 设置列表项之间的水平间距 */
+		  padding: 10px 20px; /* 设置列表项的内边距 */
+		  background-color: #ffffff; /* 设置列表项的背景色 */
+		  border: 1px solid #d9d9d9; /* 设置列表项的边框 */
+		  border-radius: 5px; /* 添加圆角效果 */
+		  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+		}
+		
+		.nav > li:hover {
+		  background-color: #f2f2f2; /* 鼠标悬停时，改变列表项的背景色 */
+		}
+		
+		
+
+	</style>
+	<script type="text/javascript">
+		function toggleDiv() {
+		  var div = document.getElementById("myDiv");
+		  if (div.style.display === "none") {
+		    div.style.display = "block";
+		  } else {
+		    div.style.display = "none";
+		  }
+		}
+		
+		$(function(){
+		    var $tooltips = $('.js_tooltips');
+		  var $toast = $('#js_toast');
+			
+		    $('#showTooltips').on('click', function(){
+		        if ($tooltips.css('display') != 'none') return;
+			
+		        // toptips的fixed, 如果有`animation`, `position: fixed`不生效
+		        $('.page.cell').removeClass('slideIn');
+			
+		        $toast.fadeIn(100);
+		        $toast.attr('aria-live','assertive');
+		        setTimeout(function () {
+		          $toast.fadeOut(100);
+		          $toast.attr('aria-live','off');
+		        }, 2000);
+		    });
+		});
+		
+		function toggleImage() {
+			  var image = document.getElementById("myImage");
+			  if (image.style.display === "none") {
+			    image.style.display = "block";
+			  } else {
+			    image.style.display = "none";
+			  }
+			}
+		
+		function showAlert() {
+			alert('根据安培定则可以知道，N极在左侧，条形磁铁S极与N极互相吸引，电流增大，引力增大，摩擦力和引力大小相等方向相反，即水平向左')
+		}
+
+	</script>
+	<body>
+		<button onclick="toggleImage()" class="weui-btn weui-btn_mini weui-btn_default weui-wa-hotarea">点击显示/隐藏图片</button>
+		<img id="myImage" src="../img/12.jpg">
+			<div id="myDiv">
+				<ul>
+					<li>如图所示，条形磁铁放在水平桌面上，电磁铁右端固定并与条形磁铁在同一水平面上，闭合开关S</li>
+					<li>当滑动变阻器的滑片P逐渐向右移动时，条形磁铁仍保持静止，此时电磁铁的左端为（1）极</li>
+					<li>条形磁铁受到的摩檫力（2）;</li>
+					<li>方向水平向（3）。</li>
+				</ul>
+			</div>
+			<button onclick="toggleDiv()" class="weui-btn weui-btn_mini weui-btn_default weui-wa-hotarea">查看题目</button>
+		  <label for="select2" class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+			<div class="weui-cell__hd">
+				<span class="weui-label">（1）</span>
+			</div>
+			<div class="weui-cell__bd">
+				<select class="weui-select" name="select2" id="select2">
+					<option value="1">N</option>
+					<option value="2">S</option>
+				</select>
+			</div>
+		  </label>
+		  <label for="select2" class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+		  			<div class="weui-cell__hd">
+		  				<span class="weui-label">（2）</span>
+		  			</div>
+		  			<div class="weui-cell__bd">
+		  				<select class="weui-select" name="select2" id="select2">
+		  					<option value="1">变小</option>
+		  					<option value="2">变大</option>
+		  					<option value="3">不变</option>
+		  				</select>
+		  			</div>
+		  </label>
+		  <label for="select2" class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+		  			<div class="weui-cell__hd">
+		  				<span class="weui-label">（3）</span>
+		  			</div>
+		  			<div class="weui-cell__bd">
+		  				<select class="weui-select" name="select2" id="select2">
+		  					<option value="1">向左</option>
+		  					<option value="2">向右</option>
+		  				</select>
+		  			</div>
+		  </label>
+		  <div class="weui-form__opr-area">
+		    <button onclick="alert('（1）N，（2）变大，（3）向左')" type="button" class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">提交答案</button>
+		    <button onclick="showAlert()" type="button" class="weui-btn weui-btn_default">详解</button>
+		  </div>
+		  <nav class="nav">
+		  		<li><a href="task08.html">1</a></li>
+		  		<li><a href="task09.html">2</a></li>
+		  		<li><a href="task10.html">3</a></li>
+		  		<li><a href="task11.html">4</a></li>
+		  		<li><a href="task12.html">5</a></li>
+		  		<li><a href="task13.html">6</a></li>
+		  		<li><a href="task14.html">7</a></li>
+		  </nav>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myDiv {
+		  display: none;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function toggleDiv() {
+		  var div = document.getElementById("myDiv");
+		  if (div.style.display === "none") {
+		    div.style.display = "block";
+		  } else {
+		    div.style.display = "none";
+		  }
+		}
+
+	</script>
+	<body>
+		<div id="myDiv">
+			<ul>
+				<li>夏日炎炎，小东从开着空调的屋内刚走到室外时，眼镜的镜片变模糊是由于空气中的水蒸气（1）形成</li>
+				<li>他在游泳池游泳后走上岸感觉到有点冷是由于身上的水（2）吸热所致</li>
+				<li>他买了冰棒含嘴里过了一会感到凉快是由干冰棒（3）吸热所致.</li>
+				<li>(均填物态变化名称)</li>
+			</ul>
+		</div>
+		<button onclick="toggleDiv()">点击这里</button>
+	</body>
+</html>
